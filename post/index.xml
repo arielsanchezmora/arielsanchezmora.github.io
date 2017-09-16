@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on @arielsanchezmor blog activity tracker</title>
+    <link>http://blogs.arielsanchezmora.com/post/</link>
+    <description>Recent content in Posts on @arielsanchezmor blog activity tracker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
+    <lastBuildDate>Sat, 16 Sep 2017 00:20:04 -0400</lastBuildDate>
+    
+	<atom:link href="http://blogs.arielsanchezmora.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LittleHack001</title>
+      <link>http://blogs.arielsanchezmora.com/post/littlehack001/</link>
+      <pubDate>Sat, 16 Sep 2017 00:20:04 -0400</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/littlehack001/</guid>
+      <description>Hi Gang!
+It took me a while to figure out how to create a custom domain using the Hugo static website generator, but here we are!
+This was part of the #PGHLittleHack initiative that @CarlCapozza and I started right after the 2017 VMworld US Hackathon.
+Thank you for reading this! It&amp;rsquo;s obviously a small start but I&amp;rsquo;m proud of it :)</description>
+    </item>
+    
+  </channel>
+</rss>
