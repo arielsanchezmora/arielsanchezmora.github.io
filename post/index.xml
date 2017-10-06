@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Sat, 16 Sep 2017 00:20:04 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 04 Oct 2017 00:20:04 -0400</lastBuildDate>
     
 	<atom:link href="http://blogs.arielsanchezmora.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LittleHack002</title>
+      <link>http://blogs.arielsanchezmora.com/post/littlehack002/</link>
+      <pubDate>Wed, 04 Oct 2017 00:20:04 -0400</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/littlehack002/</guid>
+      <description>Hello again!
+You can&amp;rsquo;t learn what you can&amp;rsquo;t repeat. So here I am making a second blog post with Hugo on my Github page with a custom domain to get into the groove.
+We&amp;rsquo;re doing another #PGHLittleHack this Thursday, October 5. If you don&amp;rsquo;t remember what they are about @CarlCapozza and I started doing a local, VMUG/vBrownBag version, of the VMworld Hackathons, right after the 2017 VMworld US Hackathon - because we loved the concept, camaraderie, and knowledge sharing spirit of it, and we wanted more.</description>
+    </item>
     
     <item>
       <title>LittleHack001</title>
