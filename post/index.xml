@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on @arielsanchezmor blog activity tracker</title>
+    <title>Posts on @arielsanchezmor blogging here!</title>
     <link>http://blogs.arielsanchezmora.com/post/</link>
-    <description>Recent content in Posts on @arielsanchezmor blog activity tracker</description>
+    <description>Recent content in Posts on @arielsanchezmor blogging here!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Wed, 04 Oct 2017 00:20:04 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 06 Oct 2017 00:15:04 -0400</lastBuildDate>
     
 	<atom:link href="http://blogs.arielsanchezmora.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ariel&#39;s blogging</title>
+      <link>http://blogs.arielsanchezmora.com/post/consolidated_blogging/</link>
+      <pubDate>Fri, 06 Oct 2017 00:15:04 -0400</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/consolidated_blogging/</guid>
+      <description>Hello again! Let&amp;rsquo;s talk about blogging - in particular, say, I don&amp;rsquo;t know, my blogging :)
+Blogging is cool. It&amp;rsquo;s also not that hard. You don&amp;rsquo;t have to write a long essay - it shouldn&amp;rsquo;t be tweet-sized either, but it doesn&amp;rsquo;t need to be too long. Take a little while to share something, even if it&amp;rsquo;s just a piece of your mind.
+I particularly like focused blogs that solve some kind of problem most.</description>
+    </item>
     
     <item>
       <title>LittleHack002</title>
