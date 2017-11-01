@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>#vDocumentation, three months in</title>
+
+  
+  
+
+
+
+
+  
+  <meta name="author" content="arielsanchezmor" />
+  <meta name="description" content="Hi everyone!
+This is a retrospective blog post on the little open source project that Edgar Sanchez @edmsanchez13 and I launched in VMworld US 2017 named #vDocumentation
+We submitted it as a session in VMworld 2017 and we were very happy to see that 1) it was approved 2) it was a popular session! It was pretty neat that we got a 500 person room on Monday after the keynote, because people are very anxious to go into sessions at that point of the conference." />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@arielsanchezmor" />
+    <meta name="twitter:title" content="#vDocumentation, three months in" />
+    <meta name="twitter:description" content="Hi everyone!
+This is a retrospective blog post on the little open source project that Edgar Sanchez @edmsanchez13 and I launched in VMworld US 2017 named #vDocumentation
+We submitted it as a session in VMworld 2017 and we were very happy to see that 1) it was approved 2) it was a popular session! It was pretty neat that we got a 500 person room on Monday after the keynote, because people are very anxious to go into sessions at that point of the conference." />
+    <meta name="twitter:image" content="http://blogs.arielsanchezmora.com/img/avatar.jpg" />
+  
+
+
+
+
+<meta name="generator" content="Hugo 0.27.1" />
+
+
+<link rel="canonical" href="http://blogs.arielsanchezmora.com/post/vdocumentation-three-months-in/" />
+<link rel="alternative" href="http://blogs.arielsanchezmora.com/index.xml" title="@arielsanchezmor blogging here!" type="application/atom+xml" />
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="@arielsanchezmor blogging here!" />
+<meta name="msapplication-tooltip" content="@arielsanchezmor blogging here!" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
+<link rel="icon" href="http://blogs.arielsanchezmora.com/img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="http://blogs.arielsanchezmora.com/img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="http://blogs.arielsanchezmora.com/img/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="http://blogs.arielsanchezmora.com/img/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="http://blogs.arielsanchezmora.com/img/touch-icon-apple.png" />
+<link rel="mask-icon" href="http://blogs.arielsanchezmora.com/img/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="http://blogs.arielsanchezmora.com/css/bundle.css" />
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="http://blogs.arielsanchezmora.com/img/github_pic.jpg" alt="Avatar">
+  
+  <h2 class="title">@arielsanchezmor blogging here!</h2>
+  
+  <p class="subtitle">Because Azarya can&#39;t be searching all over the internet!</p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item  is-active"><a href="http://blogs.arielsanchezmora.com/">Home</a></li>
+      
+        <li class="menu-item "><a href="https://github.com/arielsanchezmora">GitHub</a></li>
+      
+        <li class="menu-item "><a href="http://blogs.arielsanchezmora.com/about/">About</a></li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+
+      
+      <li class="social-item">
+        <a href="//github.com/arielsanchezmora" title="GitHub"><span class="icon icon-github"></span></a>
+      </li>
+
+      <li class="social-item">
+        <a href="//twitter.com/arielsanchezmor" title="Twitter"><span class="icon icon-twitter"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="http://blogs.arielsanchezmora.com/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">#vDocumentation, three months in</h1>
+      <p class="post-meta">@arielsanchezmor · Oct 31, 2017 · 3 min read</p>
+    </header>
+    <article class="post-content"><p>Hi everyone!</p>
+
+<p>This is a retrospective blog post on the little open source project that Edgar Sanchez <a href="https://twitter.com/edmsanchez13" target="_blank">@edmsanchez13</a> and I launched in VMworld US 2017 named <a href="https://twitter.com/hashtag/vdocumentation?f=tweets&vertical=default&src=hash" target="_blank">#vDocumentation</a></p>
+
+<p>We submitted it as a  <a href="https://my.vmworld.com/scripts/catalog/uscatalog.jsp?search=2077" target="_blank"> session in VMworld 2017</a> and we were very happy to see that 1) it was approved 2) it was a popular session! It was pretty neat that we got a 500 person room on Monday after the keynote, because people are very anxious to go into sessions at that point of the conference. Even though it was our first time presenting in a global conference <em>ever</em>, people were very interested in the content and it practically filled out. We had great questions during and after it, we gave away lots of cheap stickers to the attendees so they would remember to google it later, we got lots of feedback after the talk, and that day we made new friends.</p>
+
+<p>The good news didn&rsquo;t stop there - the session was <a href="https://www.vmworld.com/en/us/video/top-sessions.html" target="_blank"> voted a top session</a>, the <a href="https://www.youtube.com/watch?v=-KK0ih8tuTo" target="_blank"> youtube recording</a> has been in the top 20 views report that <a href="https://github.com/lamw/vmworld2017-session-urls" target="_blank"> William Lam generates</a>, and more importantly, we had people actually opening up issues and feature requests in GitHub. We created a #vDocumentation channel in the <a href="https://code.vmware.com/web/code/join" target="_blank"> VMware Code Slack</a>, and have had contributions already from Justin Sider <a href="https://twitter.com/jpsider" target="_blank"> @jpsider</a>  and very soon from Graham Barker <a href="https://twitter.com/VirtualG_UK" target="_blank"> @VirtualG_UK</a>.</p>
+
+<p>Edgar, who has written 95% of vDocumentation, released a v2.0, which changed the code from one big file to one file per cmdlet, to simplify future collaboration. He&rsquo;s also done several little improvements, and he still manages keeping the code in Github in sync with what&rsquo;s in the PowerShell Gallery. You can see in the PS Gallery page that 400+ people have <a href="https://www.powershellgallery.com/packages/vDocumentation/2.0.0" target="_blank"> downloaded it</a>.</p>
+
+<p>So far, the project has gathered 42 stars in GitHub and much more unique visitors than I expected. You can see some cool open source visualizations webpages like this one from <a href="http://ghv.artzub.com/#repo=vDocumentation&climit=100&user=arielsanchezmora" target="_blank"> @artzub</a> and <a href="https://githubstats.com/arielsanchezmora/vDocumentation" target="_blank"> this one from GitHub stats</a>. There&rsquo;s also the cool Insights/Traffic page <a href="https://github.com/arielsanchezmora/vDocumentation/graphs/traffic" target="_blank"> GitHub gives you</a>, even though I can&rsquo;t figure how to change the date range :)</p>
+
+<p>These stats are cool, but I also want to share why I think two newbies like Edgar and me have had &ldquo;success&rdquo; - if I may be so bold. Recently a blog post caught my attention - <a href="https://twitter.com/vmwopensource/status/925072219792953345" target="_blank"> &ldquo;Growing a Community for a New Open Source Project&rdquo;</a>, an excellent contribution from Ben Pfaff <a href="https://twitter.com/Ben_Pfaff" target="_blank"> Ben_Pfaff</a>  and Justin Pettit <a href="https://twitter.com/Justin_D_Pettit" target="_blank"> Justin_D_Pettit</a>, two OVS contributors whom I admire. Even though vDocumentation is really small compared to real Open Source projects, I offered my viewpoints as to why we have had user engagement:</p>
+
+<ul>
+<li>We had a very targeted, public launch - #vDocumentation used a VMworld presentation as a starting point.</li>
+<li>We gave out stickers at the end of the presentation so people would remember to look up the project easily if they were interested</li>
+<li>We encouraged Twitter and VMware Code Slack feedback from day one, and made clear we wanted the project to improve past our original vision</li>
+<li>We established a project &ldquo;personality&rdquo; of being welcoming to people new to open source collaboration, GitHub, PowerShell</li>
+<li>We stated up front that we would support the project long term</li>
+</ul>
+
+<p>We think we have been successful with that approach. We know how difficult admin life can be already - we don&rsquo;t judge, we don&rsquo;t pretend we&rsquo;re GitHub or PowerCLI experts, we humbly ask for others to help us improve the project for everyone&rsquo;s benefit. We want to think that attitude has helped, and will help going forward.</p>
+
+<p>Thank you for reading this far, and I hope to re-visit the project in another three months or so, and still be proud of it. Mostly, we wish people keep finding it useful, and we wish the list of contributors keeps growing :)</p>
+</article>
+    <footer class="post-footer">
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017 @arielsanchezmor blogging here!</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\(','\)']]}
+});
+</script>
+
+<script src="http://blogs.arielsanchezmora.com/js/bundle.js"></script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-13073347-5', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+  </body>
+</html>

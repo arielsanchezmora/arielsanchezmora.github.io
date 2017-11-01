@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Tue, 31 Oct 2017 09:11:04 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 31 Oct 2017 10:09:04 -0400</lastBuildDate>
     
 	<atom:link href="http://blogs.arielsanchezmora.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>#vDocumentation, three months in</title>
+      <link>http://blogs.arielsanchezmora.com/post/vdocumentation-three-months-in/</link>
+      <pubDate>Tue, 31 Oct 2017 10:09:04 -0400</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/vdocumentation-three-months-in/</guid>
+      <description>Hi everyone!
+This is a retrospective blog post on the little open source project that Edgar Sanchez @edmsanchez13 and I launched in VMworld US 2017 named #vDocumentation
+We submitted it as a session in VMworld 2017 and we were very happy to see that 1) it was approved 2) it was a popular session! It was pretty neat that we got a 500 person room on Monday after the keynote, because people are very anxious to go into sessions at that point of the conference.</description>
+    </item>
     
     <item>
       <title>Writing abstracts for IT conferences</title>
