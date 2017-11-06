@@ -22,6 +22,19 @@
     </item>
     
     <item>
+      <title>Disabling vSAN and reclaiming disks when vCenter is not available - VM Gotchas</title>
+      <link>http://blogs.arielsanchezmora.com/post/disabling-vsan-and-reclaiming-disks-when-vcenter-is-not-available/</link>
+      <pubDate>Sun, 05 Nov 2017 21:09:04 -0400</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/disabling-vsan-and-reclaiming-disks-when-vcenter-is-not-available/</guid>
+      <description>Hi everyone!
+This is a quick blog post to highlight a new entry in my VMGotchas.com blog:
+Disabling vSAN and reclaiming disks when vCenter is not available. I hope you enjoy it!
+Let me know your comments in Twitter @arielsanchezmor. Thank you for reading, and hope to see you around soon!
+Ariel</description>
+    </item>
+    
+    <item>
       <title>#vDocumentation, three months in</title>
       <link>http://blogs.arielsanchezmora.com/post/vdocumentation-three-months-in/</link>
       <pubDate>Tue, 31 Oct 2017 10:09:04 -0400</pubDate>

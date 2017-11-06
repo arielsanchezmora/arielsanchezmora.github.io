@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://blogs.arielsanchezmora.com/post/disabling-vsan-and-reclaiming-disks-when-vcenter-is-not-available/</loc>
+    <lastmod>2017-11-05T21:09:04-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blogs.arielsanchezmora.com/post/vdocumentation-three-months-in/</loc>
     <lastmod>2017-10-31T10:09:04-04:00</lastmod>
   </url>
@@ -60,7 +65,7 @@
   
   <url>
     <loc>http://blogs.arielsanchezmora.com/post/</loc>
-    <lastmod>2017-10-31T10:09:04-04:00</lastmod>
+    <lastmod>2017-11-05T21:09:04-04:00</lastmod>
     <priority>0</priority>
   </url>
   
