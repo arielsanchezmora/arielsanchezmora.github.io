@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://blogs.arielsanchezmora.com/post/vbrownbag---end-of-2017-posts/</loc>
+    <lastmod>2017-12-27T22:09:04-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blogs.arielsanchezmora.com/post/fedora-27-dual-boot-with-windows-10-and-uefi/</loc>
     <lastmod>2017-11-25T22:09:04-04:00</lastmod>
   </url>
@@ -64,13 +69,8 @@
   </url>
   
   <url>
-    <loc>http://blogs.arielsanchezmora.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://blogs.arielsanchezmora.com/post/</loc>
-    <lastmod>2017-11-25T22:09:04-04:00</lastmod>
+    <lastmod>2017-12-27T22:09:04-04:00</lastmod>
     <priority>0</priority>
   </url>
   
