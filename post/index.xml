@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Sat, 12 Jan 2019 00:20:04 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 26 Feb 2019 00:20:04 -0500</lastBuildDate>
     
 	<atom:link href="http://blogs.arielsanchezmora.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Seattle VMUG slides and a quick VSAN post for homelabs</title>
+      <link>http://blogs.arielsanchezmora.com/post/seattle-vmug-slides-and-a-quick-vsan-post-for-homelabs/</link>
+      <pubDate>Tue, 26 Feb 2019 00:20:04 -0500</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/seattle-vmug-slides-and-a-quick-vsan-post-for-homelabs/</guid>
+      <description>Hi everyone!
+Greetings from Palo Alto! I&amp;rsquo;m here this week for the Office of the CTO Principal/Global Field/Ambassador week-long meeting. I&amp;rsquo;m only one day in, and it&amp;rsquo;s amazing to have this level of access and interaction. Humbled and honored!
+Just a week ago, I had the honor of presenting a new talk at the Seattle UserCon on Feb 19. Software Defined Networking is a topic I love geeking out on, but it&amp;rsquo;s not related today with my job at VMware - great material for a community session!</description>
+    </item>
     
     <item>
       <title>vExpert 2019 - My tips to help your approval odds</title>
