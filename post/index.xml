@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Tue, 26 Feb 2019 00:20:04 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2019 00:20:04 -0500</lastBuildDate>
     
 	<atom:link href="http://blogs.arielsanchezmora.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The pursuit of happiness</title>
+      <link>http://blogs.arielsanchezmora.com/post/the-pursuit-of-happiness/</link>
+      <pubDate>Sun, 24 Mar 2019 00:20:04 -0500</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/the-pursuit-of-happiness/</guid>
+      <description>Hi everyone!
+We came to the amazing city of Pittsburgh in 2017 when my wife accepted a learning position in town. Pittsburgh is a city I hold very dear, with genuinely nice people, lots of history and adorable quirks. I will actually make a blog post of all my favorite PGH things in the future. It is a city with excellent craft beer, a hard rock mentality, and true love of sports - who wouldn&amp;rsquo;t love that!</description>
+    </item>
     
     <item>
       <title>Seattle VMUG slides and a quick VSAN post for homelabs</title>
