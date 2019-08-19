@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Sun, 11 Aug 2019 01:20:04 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 19 Aug 2019 01:20:04 -0500</lastBuildDate>
     
 	<atom:link href="http://blogs.arielsanchezmora.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>More VMworld tips</title>
+      <link>http://blogs.arielsanchezmora.com/post/moar-vmworld-tips/</link>
+      <pubDate>Mon, 19 Aug 2019 01:20:04 -0500</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/moar-vmworld-tips/</guid>
+      <description>I decided to write additional VMworld tips that I didn&amp;rsquo;t see deeply covered in everyone&amp;rsquo;s blog posts. Better yet, I did it in Github so if anyone wants to add to it, just send me a PR!
+https://github.com/arielsanchezmora/More-VMworld-tips/blob/master/README.md
+Or, let me know what you think is missing via twitter and I&amp;rsquo;ll add it and credit you.
+best,
+Ariel</description>
+    </item>
     
     <item>
       <title>Get ready for the VMworld US 2019 Hackathon, and my team&#39;s details!</title>
