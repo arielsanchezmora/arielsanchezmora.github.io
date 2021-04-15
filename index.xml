@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Thu, 08 Apr 2021 15:20:04 -0500</lastBuildDate><atom:link href="http://blogs.arielsanchezmora.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Apr 2021 10:00:00 -0600</lastBuildDate><atom:link href="http://blogs.arielsanchezmora.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>http://blogs.arielsanchezmora.com/about/</link>
@@ -16,6 +16,15 @@
       <guid>http://blogs.arielsanchezmora.com/about/</guid>
       <description>Hi! Thank you for reading my blog. I don&amp;rsquo;t blog very often but I do try to make the posts interesting as they are an extension of my personal thoughts. I don&amp;rsquo;t have comments enabled, please interact with me through @arielsanchezmor in Twitter!
 Here&amp;rsquo;s my bio in English and Spanish and a picture if you need it. When I attend a community event, it should show up in this calendar and if I promised slides, they most likely will be in my Github VMUG talks repository.</description>
+    </item>
+    
+    <item>
+      <title>Identifier behavior when copying or cloning VMs</title>
+      <link>http://blogs.arielsanchezmora.com/post/identifier-behavior-when-copying-or-cloning-vms/</link>
+      <pubDate>Mon, 12 Apr 2021 10:00:00 -0600</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/identifier-behavior-when-copying-or-cloning-vms/</guid>
+      <description>Sometimes a customer has a use case where they are copying VM files from one location to another. This can sometimes lead to issues that are not apparent immediately. One example: I had one customer where a VM was copied to several remote sites, and this wasn&amp;rsquo;t causing a problem at first sight, but when licensing was turned on and the VM&amp;rsquo;s tried to register it became a problem because they all had the same identifiers.</description>
     </item>
     
     <item>
@@ -328,6 +337,20 @@ We&amp;rsquo;re doing another #PGHLittleHack this Thursday, October 5. If you do
 It took me a while to figure out how to create a custom domain using the Hugo static website generator, but here we are!
 This was part of the #PGHLittleHack initiative that @CarlCapozza and I started right after the 2017 VMworld US Hackathon.
 Thank you for reading this! It&amp;rsquo;s obviously a small start but I&amp;rsquo;m proud of it :)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://blogs.arielsanchezmora.com/post/draft-little-nfs-nugget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://blogs.arielsanchezmora.com/post/draft-little-nfs-nugget/</guid>
+      <description>esxcli storage nfs remove -v LenovoEMC_PX4-300D_NFS_ISOs
+esxcli storage nfs add &amp;ndash;host=192.168.3.11 &amp;ndash;share=/nfs/nfs_ISOs -v=LenovoEMC_PX4-300D_nfs_ISOs
+esxcli storage nfs add Error: Missing required parameter -s|&amp;ndash;share Missing required parameter -H|&amp;ndash;host Missing required parameter -v|&amp;ndash;volume-name
+Usage: esxcli storage nfs add [cmd options]
+Description: add Add a new NAS volume to the ESX Host and mount it with the given volume name.
+Cmd options: -H|&amp;ndash;host=The hostname or IP address of the NAS volume to add and mount on the system.</description>
     </item>
     
   </channel>

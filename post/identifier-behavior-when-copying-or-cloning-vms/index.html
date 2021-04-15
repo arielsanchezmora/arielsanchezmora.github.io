@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Identifier behavior when copying or cloning VMs</title>
+
+  
+  
+
+
+
+
+  
+  <meta name="author" content="arielsanchezmor" />
+  <meta name="description" content="Sometimes a customer has a use case where they are copying VM files from one location to another. This can sometimes lead to issues that are not apparent immediately. One example: I had one customer where a VM was copied to several remote sites, and this wasn&amp;rsquo;t causing a problem at first sight, but when licensing was turned on and the VM&amp;rsquo;s tried to register it became a problem because they all had the same identifiers." />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@arielsanchezmor" />
+    <meta name="twitter:title" content="Identifier behavior when copying or cloning VMs" />
+    <meta name="twitter:description" content="Sometimes a customer has a use case where they are copying VM files from one location to another. This can sometimes lead to issues that are not apparent immediately. One example: I had one customer where a VM was copied to several remote sites, and this wasn&amp;rsquo;t causing a problem at first sight, but when licensing was turned on and the VM&amp;rsquo;s tried to register it became a problem because they all had the same identifiers." />
+    <meta name="twitter:image" content="http://blogs.arielsanchezmora.com/img/avatar.jpg" />
+  
+
+
+
+
+<meta name="generator" content="Hugo 0.82.0" />
+
+
+<link rel="canonical" href="http://blogs.arielsanchezmora.com/post/identifier-behavior-when-copying-or-cloning-vms/" />
+<link rel="alternative" href="http://blogs.arielsanchezmora.com/index.xml" title="@arielsanchezmor blogging here!" type="application/atom+xml" />
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="@arielsanchezmor blogging here!" />
+<meta name="msapplication-tooltip" content="@arielsanchezmor blogging here!" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
+<link rel="icon" href="http://blogs.arielsanchezmora.com/img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="http://blogs.arielsanchezmora.com/img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="http://blogs.arielsanchezmora.com/img/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="http://blogs.arielsanchezmora.com/img/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="http://blogs.arielsanchezmora.com/img/touch-icon-apple.png" />
+<link rel="mask-icon" href="http://blogs.arielsanchezmora.com/img/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="http://blogs.arielsanchezmora.com/css/bundle.css" />
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="http://blogs.arielsanchezmora.com/img/github_pic.jpg" alt="Avatar">
+  
+  <h2 class="title">@arielsanchezmor blogging here!</h2>
+  
+  <p class="subtitle">Because Azarya can&#39;t be searching all over the internet!</p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item  is-active"><a href="http://blogs.arielsanchezmora.com/">Home</a></li>
+      
+        <li class="menu-item "><a href="https://openbsd.arielsanchezmora.com">OpenBSD notes</a></li>
+      
+        <li class="menu-item "><a href="http://blogs.arielsanchezmora.com/about/">About</a></li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+
+      
+      <li class="social-item">
+        <a href="//github.com/arielsanchezmora" title="GitHub"><span class="icon icon-github"></span></a>
+      </li>
+
+      <li class="social-item">
+        <a href="//twitter.com/arielsanchezmor" title="Twitter"><span class="icon icon-twitter"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="http://blogs.arielsanchezmora.com/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Identifier behavior when copying or cloning VMs</h1>
+      <p class="post-meta">@arielsanchezmor · Apr 12, 2021 · 6 min read</p>
+    </header>
+    <article class="post-content"><p>Sometimes a customer has a use case where they are copying VM files from one location to another. This can sometimes lead to issues that are not apparent immediately. One example: I had one customer where a VM was copied to several remote sites, and this wasn&rsquo;t causing a problem at first sight, but when licensing was turned on and the VM&rsquo;s tried to register it became a problem because they all had the same identifiers.</p>
+<p>Because the way that vCenter/ESXi treat this phenomenon varies depending on the steps you follow, I wanted to do a small deep dive on what and how to check VM identifiers. These examples are on CentOS so some of the commands may need to be adjusted, but they apply to other OS&rsquo;s as well.</p>
+<p>First we want to get familiar with what UUIDs are. This KB talks about them, where they are stored and what you can do with them depending on what you want to accomplish:</p>
+<p><a href="https://kb.vmware.com/s/article/1541">https://kb.vmware.com/s/article/1541</a></p>
+<p><a href="https://twitter.com/vDerekS">Derek Seaman</a> had shared a PowerCLI snippet to do manual UUID manipulation, if you find yourself in need to change them in an automated manner:</p>
+<p><a href="https://www.derekseaman.com/2010/10/making-your-vmware-vm-uuids-unique.html">https://www.derekseaman.com/2010/10/making-your-vmware-vm-uuids-unique.html</a></p>
+<p><em>However, I&rsquo;m hoping with this blog post you can avoid having identifier problems in the first place.</em></p>
+<h1 id="too-long-didnt-read">Too long, didn&rsquo;t read</h1>
+<p>After this section I do some tests and scenarios that highlight different situations. The <strong>TL:DR</strong> conclusion is:</p>
+<p>Once you have copied the VMDK files to your new location, ensure you add the VM to vCenter by registering the VM, and then either:</p>
+<ul>
+<li>a) Convert the imported VM to a template and deploy from that template, which also has the advantage of being able to re-create the machine easily if you need it again in the future, or</li>
+<li>b) Use the &ldquo;Clone&rdquo; feature to create the new VM from that VM you copied.</li>
+</ul>
+<p>The steps above force your vCenter to track mac and UUIDs; as you will in the examples below, not doing so doesn’t allow vCenter to &ldquo;initialize&rdquo; or &ldquo;individualize&rdquo; the VM. However, that does not completely change all identifiers in a VM, and preparing an image is also good practice for other identifiers, as we will see in the examples.</p>
+<h2 id="heres-some-scenarios-of-how-macuuidimage-properties-can-change">Here&rsquo;s some scenarios of how mac/uuid/image properties can change:</h2>
+<p>I made a fresh minimal install CentOS VM from the CentOS7 iso, and got the UUID from the command line to compare later</p>
+<blockquote>
+<p><em>[root@new-host-3 ~]# dmidecode | grep -i uuid</em><br>
+UUID: 8f543b42-942e-3ed6-0712-28eb45b251f7</p>
+</blockquote>
+<p>Then I just did &ldquo;yum update&rdquo;, and &ldquo;shutdown now&rdquo;. I did not prepare anything in this image to make it a real template.</p>
+<h2 id="first-test---cloning">First test - CLONING</h2>
+<p>I cloned the machine twice and checked mac, uuid and ssh key. Notice how we can run into some problems:</p>
+<p><em><strong>centos7clone</strong></em></p>
+<blockquote>
+<p><em>[root@new-host-4 ~]# dmidecode | grep -i uuid</em><br>
+UUID: e8d33b42-7e9a-b762-accc-03e441973f9a  &ndash; 	different!	☑️<br>
+SSH-ed25519 8f:00:be:46:35:8b:09:6e:be:00:58:0c:71:d3:ba:66  &ndash;  ⚠️this is the same as the other clone!⚠️<br>
+ethernet mac 00:50:56:bb:73:dd  &ndash;  different! ☑️</p>
+</blockquote>
+<p><em><strong>centos7clone2</strong></em></p>
+<blockquote>
+<p><em>[root@new-host-6 ~]# dmidecode | grep -i uuid</em><br>
+UUID: 21a53b42-c995-59d9-1016-d5e09db04b63  &ndash; 	different!	☑️<br>
+ssh-ed25519 8f:00:be:46:35:8b:09:6e:be:00:58:0c:71:d3:ba:66  &ndash;  ⚠️this is the same as the other clone!⚠️<br>
+ethernet mac 00:50:56:bb:87:c6  &ndash;  different! ☑️</p>
+</blockquote>
+<p>Notice 3 things here</p>
+<ul>
+<li>vCenter does change UUID</li>
+<li>vCenter does change MAC address</li>
+<li>vCenter does <strong>not</strong> change SSH public key</li>
+</ul>
+<p>vCenter makes the machine unique - even if you don’t ask it explicitly to do it - as long as it’s aware of the source and destination file locations. It knows they are different VMs and keeping the same MAC and UUIDs would cause a conflict, and so it changes them as part of the Cloning operation.</p>
+<h2 id="second-test---simulate-copying-a-vm-to-a-remote-site">Second test - simulate copying a VM to a remote site</h2>
+<p>I grabbed centos7clone and downloaded it to my machine. I had to do it with WinSCP, I had errors after downloading the results as a CentOS7clone.zip file and re-uploading it in the html5 client – the VM couldn’t find its disk. I’m hoping this is similar to what people copying VMs to remote locations are doing.</p>
+<p>I opened a new datastore in the same vCenter, but in a different virtual datacenter and cluster, to simulate a common configuration for a remote site and uploaded the VM as a folder. When I turned this VM on it didn’t ask me if I had moved or copied it - that was unexpected. If it’s not asking this question I can understand how it can lead to issues.</p>
+<p><img src="http://blogs.arielsanchezmora.com/img/problem_with_cloning_VMs_1.jpg" alt="screenshot1"></p>
+<p>Here’s the results:</p>
+<p><strong>New centos7clone, uploaded to different vCenter</strong></p>
+<blockquote>
+<p><em>[root@new-host-8 ~]# dmidecode | grep -i uuid</em><br>
+UUID: e8d33b42-7e9a-b762-accc-03e441973f9a  &ndash;  ⚠️same! This is a problem!⚠️<br>
+ssh-ed25519 8f:00:be:46:35:8b:09:6e:be:00:58:0c:71:d3:ba:66  &ndash;  ⚠️this is the same as the other clone as well⚠️<br>
+ether 00:50:56:bb:ab:47  &ndash;  different!	☑️</p>
+</blockquote>
+<p><strong>centos7clone, the original</strong></p>
+<blockquote>
+<p><em>[root@new-host-4 ~]# dmidecode | grep -i uuid</em><br>
+UUID: e8d33b42-7e9a-b762-accc-03e441973f9a  &ndash;  ⚠️same! This is a problem!⚠️<br>
+SSH-ed25519 8f:00:be:46:35:8b:09:6e:be:00:58:0c:71:d3:ba:66  &ndash;  ⚠️this is the same as the other clone as well⚠️<br>
+ether 00:50:56:bb:73:dd  &ndash;  different!	☑️</p>
+</blockquote>
+<p>We can see that downloading and re-uploading the VM doesn’t trigger the vCenter to re-initialize this VM. It tracked the MAC address and changed it, but since it doesn’t try to initialize the VM - no dialog asking if you moved or copied-  then you can have the same UUID show up in another VM at the same time in your company, simply because different vCenters can&rsquo;t coordinate.</p>
+<p>It is better that once the VM has been added to another virtual datacenter or another vCenter you clone it or create a template from it. Above we proved that as long as the operation is inside vCenter, it does reset the UUID and MAC for the new VM. I tested his by making a clone of the VM at the remote site and checking the identifiers again:</p>
+<p><img src="http://blogs.arielsanchezmora.com/img/problem_with_cloning_VMs_1b.jpg" alt="screenshot2"></p>
+<p><strong>centos7remoteclone</strong></p>
+<blockquote>
+<p><em>[root@new-host-9 ~]#  dmidecode | grep -i uuid</em><br>
+UUID: 294c3b42-37b6-f7d3-da2e-b8776a21c845&ndash;  different!	☑️<br>
+ssh-ed25519 8f:00:be:46:35:8b:09:6e:be:00:58:0c:71:d3:ba:66 &ndash;  ⚠️this is the same as the other clone!⚠️
+ether 00:50:56:bb:58:7b&ndash;  different!	☑️</p>
+</blockquote>
+<h2 id="important-note-on-image-preparation">Important note on image preparation</h2>
+<p>The SSH key in the clones shows that I hadn’t properly prepared the template. Similar to windows and the sysprep command, there are ways to force a linux template to regen all it’s identifiers. I googled and quickly found a post explaining how to prepare an image for a vSphere template. SSH key is just the tip of the iceberg, the preparation even recommends removing UUID references from the OS, old log files, shell history, etc.</p>
+<p><a href="https://community.spiceworks.com/how_to/151558-create-a-rhel-centos-6-7-template-for-vmware-vsphere">https://community.spiceworks.com/how_to/151558-create-a-rhel-centos-6-7-template-for-vmware-vsphere</a></p>
+<p>Here’s an example of how image preparation did change the SSH key. I followed the steps in one of those links and transformed the centos VM into a template. I created two VMs from template:</p>
+<p><strong>CentOS7fromtpl</strong></p>
+<blockquote>
+<p><em>[root@new-host-5 ~]# dmidecode | grep -i uuid</em><br>
+UUID: 53c63b42-4822-a08e-0316-888398135a75  &ndash;  different!	☑️<br>
+SSH-ed25519 2b:6d:ac:db:04:c0:5a:fe:f8:ab:c7:76:fc:da:71:e8  &ndash;  different!	☑️<br>
+ether 00:50:56:bb:f0:20  &ndash;  different!	☑️</p>
+</blockquote>
+<p><strong>CentOs7fromtpl2</strong></p>
+<blockquote>
+<p><em>[root@new-host-7 ~]# dmidecode | grep -i uuid</em><br>
+UUID: 54d83b42-24ba-6885-c150-54a64e299101 &ndash; different!	☑️<br>
+ssh-ed25519 73:77:bf:a5:b4:43:cb:79:ca:b3:27:fb:9e:6c:26:70 &ndash; different!	☑️<br>
+ether 00:50:56:bb:4e:04 &ndash; different!	☑️</p>
+</blockquote>
+<p>Hope this all helps!</p>
+<p>best,</p>
+<p><a href="https://twitter.com/arielsanchezmor">Ariel</a></p>
+</article>
+    <footer class="post-footer">
+      
+      <p class="post-copyright">
+        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017-2021 @arielsanchezmor blogging here!</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\(','\)']]}
+});
+</script>
+
+<script src="http://blogs.arielsanchezmora.com/js/bundle.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-13073347-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+  </body>
+</html>
